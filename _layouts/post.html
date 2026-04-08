@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<article>
+    <header>
+        <h1>{{ page.title }}</h1>
+        <div class="post-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+            {% if page.author %} • By {{ page.author }}{% endif %}
+            {% if page.categories %} • {{ page.categories | join: ", " }}{% endif %}
+        </div>
+    </header>
+    
+    <div class="post-content">
+        {{ content }}
+    </div>
+    
+    {% if page.tags %}
+    <div class="post-tags">
+        <p><strong>Tags:</strong> 
+        {% for tag in page.tags %}
+            <span style="background: #f0f0f0; padding: 2px 8px; margin: 2px; border-radius: 3px; font-size: 0.9em;">{{ tag }}</span>
+        {% endfor %}
+        </p>
+    </div>
+    {% endif %}
+</article>
+
+<nav class="post-navigation" style="margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px;">
+    {% if page.previous.url %}
+        <div style="float: left; width: 45%;">
+            <p><strong>Previous:</strong><br>
+            <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a></p>
+        </div>
+    {% endif %}
+    
+    {% if page.next.url %}
+        <div style="float: right; width: 45%; text-align: right;">
+            <p><strong>Next:</strong><br>
+            <a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a></p>
+        </div>
+    {% endif %}
+    
+    <div style="clear: both;"></div>
+</nav>

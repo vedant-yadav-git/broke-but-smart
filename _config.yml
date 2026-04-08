@@ -1,0 +1,43 @@
+# Site settings
+title: Broke But Smart
+description: "Personal finance advice for college students who want to build wealth without breaking the bank. Real tips from someone who's been there."
+baseurl: ""
+url: "https://brokebutsmart.com"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+# SEO
+twitter:
+  username: brokebutsmart
+  card: summary
+
+facebook:
+  app_id: 
+  publisher: 
+  admins: 
+
+social:
+  name: Broke But Smart
+  links:
+
+# Collections
+collections:
+  posts:
+    output: true
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Broke But Smart"
+      
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
