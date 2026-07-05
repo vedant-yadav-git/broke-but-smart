@@ -1,0 +1,1 @@
+vydaplayz-uploader is an internal tool operated by yadav LLC that uploads videos created by the owner to the owner's own YouTube channel. It accesses no third-party or user data, and stores only the owner's OAuth token on the owner's own machine. It does not collect, share, or sell any data. Contact: vedant@yadav.llc
